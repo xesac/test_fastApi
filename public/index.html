@@ -12,13 +12,13 @@
     </p>
      <p>
         Введите возраст: <br /> 
-        <input name="userage" id="userage" type="number"/>
+        <input name="userage" id="userage" type="number" />
     </p>
     <button onclick="send()">Отправить</button>
 <script>
     async function send(){
  
-        // получаем введеное в поле имя и возраст
+        // получаем введеные в поля имя и возраст
         const username = document.getElementById("username").value;
         const userage = document.getElementById("userage").value;
  
@@ -32,7 +32,7 @@
                 })
             });
             if (response.ok) {
-                const data = await response.json();
+                const data = await response.json(); 
                 document.getElementById("message").textContent = data.message;
             }
             else
@@ -41,6 +41,3 @@
 </script>
 </body>
 </html>
-
-
-
