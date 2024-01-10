@@ -1,8 +1,6 @@
-from pydantic import BaseModel, Field
+class User:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
 
-
-
-class User(BaseModel):
-
-    username: str = Field(default='Undefiend', max_length=10, min_length=3)
-    age: int = Field(ge=18, le=99)
+users = [User('fuck', 10) for i in range(100)]
